@@ -23,7 +23,7 @@ const Dashboard = () => {
   return (
     <div className='dashboard_container'>
       <div className='dash_img_container'>
-        <img className='img' src={avatar}/>
+        <img className='img' src={avatar} alt=''/>
       </div>
       <h2 className='dash_h2'>Dashboard</h2>
       <p className='dash_p'>Welcome, {user.user_firstname} {user.user_lastname}!</p>

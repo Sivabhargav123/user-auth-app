@@ -26,7 +26,7 @@ const Login = () => {
     <div className='total_container'>
       <div className='main1'>
         <div className='img_container'>
-          <img src={img} className='imgg'/>
+          <img src={img} className='imgg' alt=''/>
         </div>
 
       </div>
