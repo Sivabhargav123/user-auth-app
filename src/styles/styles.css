@@ -1,46 +1,316 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Login css */
+/* Container for the entire login section */
+.total_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 20px;
+}
+body{
+  margin: 0;
+}
+
+.main1{
+  width: 50%;
+}
+
+/* Container for the image */
+.img_container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for the login form */
+.login_container {
+  flex: 1;
+  padding: 3rem;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  position: relative;
+}
+
+/* Heading styling */
+.login_heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Label styling */
+.labels {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input field styling */
+.email_c, .password_c {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #2575fc;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Button styling */
+.buttons_containerr{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #6a11cb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #4c0ba0;
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  text-align: center;
+  animation: shake 0.3s;
+}
+
+/* Add a shake animation for error messages */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sign Up form css */
+/* Main container for the sign-up form */
+.signup_main_container {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD4O6zr92rN21A4oK2IUSDLUfu6wzGHjIxkGQnTfGkkNh34iJ68tbeGsMq5C8aP-XRFQM&usqp=CAU') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.signUpContainer {
+  max-width: 400px;
+  margin: 35px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading styling */
+.signHeading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form container */
+.form_container, .email_container, .phone_container, .password_container {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Label styling */
+.labels_sign {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Input field styling */
+input {
+  width: calc(100% - 10px); /* Ensures the field doesn't exceed its container */
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Button styling */
+.button {
+  width: 40%;
+  padding: 0.75rem;
+  background-color: #6a11cb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:nth-child(2){
+  background-color:rgb(175, 69, 69) ;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+/* Dashboard css styles */
+/* Main container for the dashboard */
+.dashboard_container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Container for the profile image */
+.dash_img_container {
+  margin-bottom: 1.5rem;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard heading */
+.dash_h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs and labels styling */
+.dash_p, .dash_email {
+  font-size: 18px;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.dash_p span, .dash_email span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard_container {
+    padding: 1.5rem;
   }
-  
-  .App {
-    text-align: center;
-    padding: 20px;
+
+  .img {
+    width: 100px;
+    height: 100px;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+
+  .dash_h2 {
+    font-size: 28px;
   }
-  
-  form > div {
-    margin-bottom: 10px;
+
+  .dash_p, .dash_email {
+    font-size: 16px;
   }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 8px;
-    font-size: 1rem;
-  }
-  
-  button {
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #6c757d;
-  }
-  
+}
+
+/* Hover effects for a dynamic UI experience */
+.dashboard_container:hover .img {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dash_p:hover, .dash_email:hover {
+  color: #2575fc;
+}
+
+.dash_h2:hover {
+  color: #6a11cb;
+}

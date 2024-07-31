@@ -1,26 +1,8 @@
-// import React from 'react';
-
-// const Dashboard = () => {
-//   const user = JSON.parse(localStorage.getItem('user'));
-
-//   if (!user) {
-//     return <div>No user data available</div>;
-//   }
-
-//   return (
-//     <div>
-//       <h2>Dashboard</h2>
-//       <p>First Name: {user.user_firstname}</p>
-//       <p>Email: {user.user_email}</p>
-//       <p>Phone: {user.user_phone}</p>
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import userImg from '../styles/login_imgg.png'
+import lockBg from'../styles/lockk.jpeg'
+import avatar from '../styles/avatar_dash.jpeg'
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
@@ -39,12 +21,14 @@ const Dashboard = () => {
   }
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Welcome, {user.user_firstname} {user.user_lastname}!</p>
-      <p>Email: {user.user_email}</p>
-      <p>Phone: {user.user_phone}</p>
-      {/* Display other user details as needed */}
+    <div className='dashboard_container'>
+      <div className='dash_img_container'>
+        <img className='img' src={avatar}/>
+      </div>
+      <h2 className='dash_h2'>Dashboard</h2>
+      <p className='dash_p'>Welcome, {user.user_firstname} {user.user_lastname}!</p>
+      <p className='dash_email'>Email: {user.user_email}</p>
+      <p className='dash_p'>Phone: {user.user_phone}</p>
     </div>
   );
 };

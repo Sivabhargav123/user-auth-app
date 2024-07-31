@@ -3,7 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import '../styles/styles.css'
+import img from '../styles/login_imgg.png'
 const LoginSchema = Yup.object().shape({
   user_email: Yup.string().email('Invalid email').required('Email is required'),
   user_password: Yup.string().required('Password is required'),
@@ -13,9 +14,20 @@ const Login = () => {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = React.useState('');
 
+  const handleSignUp = () => {
+    navigate('/signup'); // Navigate to the Sign Up page
+  };
+
   return (
-    <div>
-      <h2>Log In</h2>
+    <div className='total_container'>
+      <div className='main1'>
+        <div className='img_container'>
+          <img src={img} className='imgg'/>
+        </div>
+
+      </div>
+      <div className='login_container'>
+      <h2 className='login_heading'>Log In</h2>
       <Formik
         initialValues={{
           user_email: '',
@@ -42,23 +54,31 @@ const Login = () => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <div>
-              <label>Email</label>
+            <div className='email_c'>
+              <label className='labels'>Email*</label>
               <Field type="email" name="user_email" />
               <ErrorMessage name="user_email" component="div" />
             </div>
-            <div>
-              <label>Password</label>
+            <div className='password_c'>
+              <label className='labels'>Password*</label>
               <Field type="password" name="user_password" />
               <ErrorMessage name="user_password" component="div" />
             </div>
             {errorMessage && <div className="error-message">{errorMessage}</div>}
-            <button type="submit" disabled={isSubmitting}>
+            <div className='buttons_containerr'>
+            <button  className="button" type="submit" disabled={isSubmitting}>
               Log In
             </button>
+            <button  className="button" type='button' onClick={handleSignUp} >
+              Sign Up
+            </button>
+            </div>
+           
           </Form>
         )}
       </Formik>
+      </div>
+      
     </div>
   );
 };
