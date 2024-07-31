@@ -90,6 +90,7 @@ input:focus {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .button {
   padding: 0.75rem;
@@ -216,6 +217,10 @@ input:focus {
 }
 .button:nth-child(2){
   background-color:rgb(175, 69, 69) ;
+}
+
+.button:nth-child(3){
+  background-color:rgb(95, 199, 31) ;
 }
 .button:hover {
   transform: translateY(-2px);

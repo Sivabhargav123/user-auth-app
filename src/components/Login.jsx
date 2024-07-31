@@ -18,6 +18,10 @@ const Login = () => {
     navigate('/signup'); // Navigate to the Sign Up page
   };
 
+  const handleDashBoard=()=>{
+    navigate('/dashboard')
+  }
+
   return (
     <div className='total_container'>
       <div className='main1'>
@@ -72,8 +76,10 @@ const Login = () => {
             <button  className="button" type='button' onClick={handleSignUp} >
               Sign Up
             </button>
+            <button  className="button" type='button' onClick={handleDashBoard} >
+              Dashboard
+            </button>
             </div>
-           
           </Form>
         )}
       </Formik>
